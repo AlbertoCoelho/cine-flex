@@ -24,11 +24,11 @@ export default function PaginaPrincipal(){
                     {imagens.length === 0 && 'Carregando...'}
 
                     {imagens.map(imagem => (
-                        <div className="image">
                         <Link to={`/sessoes/${imagem.id}`}>
-                            <img src={imagem.posterURL} />
+                            <div className="image">
+                                <img src={imagem.posterURL} />
+                            </div>
                         </Link>
-                        </div>
                         )
                         )}
 
