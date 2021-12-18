@@ -5,7 +5,7 @@ export default function InformacaoUsuario(props){
             <div className="titulo-input">
                 <h1>{props.tituloinput}</h1>
             </div>
-            <input placeholder={props.placeholder}/>
+            <input onChange={ (event) => console.log(event.target.value) } placeholder={props.placeholder}/>
         </div>
     );
 }

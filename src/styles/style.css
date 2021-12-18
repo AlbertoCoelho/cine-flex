@@ -27,6 +27,10 @@ body {
     font-size: 34px;
 }
 
+.header a {
+    text-decoration: none;
+}
+
 .main-container {
     min-height: 100vh;
     width: 100%;
@@ -41,13 +45,21 @@ body {
 
 }
 
-
 .main-container h2 {
     color: #293845;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
+}
+
+.main-container h1 {
+    color: #247A6B;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    
 }
 
 .texto-main-container {
@@ -57,6 +69,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    margin-top: 12px;
 }
 
 .wrapper {
@@ -366,4 +380,92 @@ body {
     text-align: center;
 
     color: #FFFFFF;
+}
+
+.botao-reservar-assento a{
+    text-decoration: none;
+}
+
+.container-informacao-pedido {
+    height: 410px;
+    width: 100%;
+    background-color: #FFF;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    margin-bottom: 72px;
+}
+
+.bloco-informacao {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-around;
+
+    padding-bottom: 40px;
+}
+
+.subtitulo {
+    margin-bottom: 12px;
+
+    font-family: Roboto;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 0.04em;
+    text-align: left;
+
+    color: #293845;
+}
+
+.label {
+    font-family: Roboto;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0.04em;
+    text-align: left;
+
+    color: #293845;
+}
+
+.texto-pedido-sucesso {
+    height: 9vh;
+    width: 100%;
+    background-color: #fffFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 12px;
+    margin-bottom: 37px;
+}
+
+.botao-voltar-home {
+    width: 60%;
+    height: 42px;
+    background-color: #E8833A;
+    border-radius: 3px;
+    border: none;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+.botao-voltar-home a{
+    text-decoration: none;
+}
+
+.botao-voltar-home span {
+    color: #FFF;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.04em;
 }

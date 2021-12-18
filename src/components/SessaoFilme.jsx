@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-export default function PropsFilme(props){
+export default function SessaoFilme(props){
     return (
     <div className='caixa-sessao-filme'>
         <div className='texto-sessao-filme'>

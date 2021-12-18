@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import AssentosFilme from './AssentosFilme';
 import InformacaoUsuario from './InformacaoUsuario';
+import { Link } from 'react-router-dom';
 
 
 export default function PaginaDeAsssentos(){
@@ -56,11 +57,13 @@ export default function PaginaDeAsssentos(){
             </div>
             
             <div className='informacoes-usuario'>
-                {informacaodousuario.map( (item) => <InformacaoUsuario tituloinput={item.tituloinput} placeholder={item.placeholder} />)} 
+                {informacaodousuario.map( (item) => <InformacaoUsuario key={item.tituloinput} tituloinput={item.tituloinput} placeholder={item.placeholder} />)} 
             </div>
 
             <button className='botao-reservar-assento'>
+                <Link to={"/sucesso/"}>
                     <span>Reservar assento(s)</span>
+                </Link>
             </button>          
             
             <div className='footer'>
