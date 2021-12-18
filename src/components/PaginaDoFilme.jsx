@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import SessaoFilme from './SessaoFilme';
 
 export default function PaginaDoFilme(){
 
@@ -28,8 +28,13 @@ export default function PaginaDoFilme(){
                 <h2>Selecione o horário</h2>
             </div>
 
-            {sessaoFilme.days.map ( (item) => <PropsFilme weekday={item.weekday} date={item.date} name1={item.showtimes[0].name}
-            name2={item.showtimes[1].name} id={item.id}/>)}
+            {sessaoFilme.days.map ( (item) =>(
+                <SessaoFilme 
+                    weekday={item.weekday} 
+                    date={item.date} 
+                    showtimes={item.showtimes}
+                    key={item.id}
+                />))}
 
 
             <div className='footer'>
@@ -45,24 +50,4 @@ export default function PaginaDoFilme(){
     );
 }
 
-function PropsFilme(props){
-    return (
-    <div className='caixa-sessao-filme'>
-        <div className='texto-sessao-filme'>
-            <h1>{props.weekday} - {props.date}</h1>
-        </div>
-        <div className='caixa-horario-filme'>
-            <div className='botao-sessao'>
-                <Link to={`/assentos/${props.id}`}>
-                    <button>{props.name1}</button>
-                </Link>
-            </div>
-            <div className='botao-sessao'>
-                <Link to={`/assentos/${props.id}`} >
-                    <button>{props.name2}</button>
-                </Link>
-            </div>
-        </div>
-    </div>
-    );
-}
+

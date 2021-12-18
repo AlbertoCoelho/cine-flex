@@ -29,7 +29,7 @@ body {
 
 .main-container {
     min-height: 100vh;
-    width: 90%;
+    width: 100%;
     background-color: #FFFFFF;
 
     display: flex;
@@ -37,8 +37,10 @@ body {
 
     align-items: center;
 
-    margin: 0 5%;
+    padding: 0 15px 125px 15px;
+
 }
+
 
 .main-container h2 {
     color: #293845;
@@ -49,7 +51,7 @@ body {
 }
 
 .texto-main-container {
-    height: 17vh;
+    height: 9vh;
     width: 100%;
     background-color: #fffFFF;
     display: flex;
@@ -113,15 +115,14 @@ body {
 }
 
 .caixa-sessao-filme {
-    height: 35vh;
     width: 100%;
-
-    margin-bottom: 5vh;
-
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    margin-bottom: 23px;
 }
 
 .texto-sessao-filme {
-    height: 12vh;
     width:100%;
 
     display: flex;
@@ -137,7 +138,6 @@ body {
 
 .caixa-horario-filme {
 
-    height: 18vh;
     width: 100%;
 
     display: flex;
@@ -162,22 +162,29 @@ body {
 
 .botao-sessao button {
     width: 100%;
-    height: 85%;
+    height: 43px;
     background-color: #E8833A;
 
     cursor: pointer;
+
+    border-radius: 3px;
+    border: none;
+    color: #FFF;
 }
 
 .footer {
     width: 100%;
-    height: 35vh;
+    height: 115px;
 
     display: flex;
     align-items: center;
-    gap: 5vh;
-    margin-top: 50vh;
+    gap: 15px;
 
     background-color: #DFE6ED;
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
 
 }
 
@@ -186,7 +193,7 @@ body {
     justify-content: center;
     align-items: center;
     
-    width: 25%;
+    width: 64px;
     height: 75%;
 
     box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.1);
@@ -194,7 +201,7 @@ body {
 
     background-color: #FFFFFF;
 
-    margin-left: 5vh;
+    margin-left: 15px;
 }
 
 .caixa-imagem-filme img {
@@ -208,4 +215,155 @@ body {
     font-style: normal;
     font-weight: 400;
     font-size: 26px;
+}
+
+/* -##### PaginaDeAssentos #####- */
+
+.tela-de-assentos {
+    width: 100%;
+    background-color: #FFF;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+    margin-bottom: 13px;
+}
+
+.cadeira {
+    width: 26px;
+    height: 26px;
+    background-color: #C3CFD9;
+    border: 1px solid #808F9D;
+    border-radius: 12px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11px;
+
+    cursor: pointer;
+}
+
+.container-status-assentos {
+    height: 70px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    margin-bottom: 44px;
+}
+
+.botoes-status-assentos {
+    height: 50%;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+ 
+}
+
+.botao-status{
+    width: 26px;
+    height: 26px;
+    border-radius: 12px;
+}
+
+.selecionado {
+    background-color: #8DD7CF;
+    border: 1px solid #1AAE9E;
+}
+
+.disponivel {
+    background-color: #C3CFD9;
+    border: 1px solid #7B8B99; 
+}
+
+.indisponivel {
+    background-color: #FBE192;
+    border: 1px solid #F7C52B;
+}
+
+.texto-status-assentos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.texto-status-assentos {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    color: #4E5A65;
+}
+
+.informacoes-usuario {
+    height: 160px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    margin-bottom: 57px;
+}
+
+.titulo-input {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.dividir-informacao {
+    display: flex;
+    flex-direction: column;
+}
+
+.dividir-informacao input {
+    width: 100%;
+    height: 51px;
+
+    font-family: 'Roboto';
+    font-style: italic;
+    font-size: 18px;
+    font-weight: 400;
+
+    background: #FFFFFF;
+    border: 1px solid #D5D5D5;
+    border-radius: 3px;
+}
+
+.dividir-informacao input::placeholder{
+    color: #AFAFAF;
+}
+
+.botao-reservar-assento {
+    width: 60%;
+    height: 42px;
+    background-color: #E8833A;
+    border-radius: 3px;
+    border: none; 
+
+    margin-bottom: 30px;
+
+    cursor: pointer;
+}
+
+.botao-reservar-assento span {
+    font-family: Roboto;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0.04em;
+    text-align: center;
+
+    color: #FFFFFF;
 }
