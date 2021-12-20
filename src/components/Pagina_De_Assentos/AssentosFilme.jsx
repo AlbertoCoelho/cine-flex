@@ -1,13 +1,8 @@
-import { useState, useEffect } from 'react';
+import { useState} from 'react';
 import styled from 'styled-components';
-import { useParams } from 'react-router-dom';
-
 
 export default function AssentosFilme(props) {
     const [toggled, setToggled] = useState(false);
-
-    const { idSessao } = useParams();
-    const [seats, setSeats] = useState([]);
 
     const {id,name,isAvailable,assentosSelecionados,setAssentosSelecionados} = props;
 
@@ -20,8 +15,6 @@ export default function AssentosFilme(props) {
         }
         setAssentosSelecionados([...assentosSelecionados]);
     }
-    console.log(assentosSelecionados);
-
 
     if(isAvailable === true){
         return (

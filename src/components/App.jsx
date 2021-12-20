@@ -1,9 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./Header";
-import PaginaPrincipal from "./PaginaPrincipal";
-import PaginaDoFilme from "./PaginaDoFilme";
-import PaginaDeAsssentos from "./PaginaDeAssentos";
-import PaginaDeSucesso from "./PaginaDeSucesso";
+import PaginaPrincipal from "./Pagina_Principal/PaginaPrincipal";
+import PaginaDoFilme from "./Pagina_Do_Filme/PaginaDoFilme";
+import PaginaDeAsssentos from "./Pagina_De_Assentos/PaginaDeAssentos";
+import PaginaDeSucesso from "./Pagina_De_Sucesso/PaginaDeSucesso";
 
 
 export default function App(){
@@ -19,6 +19,3 @@ export default function App(){
         </BrowserRouter>
     );
 }
-
-/*
-*/

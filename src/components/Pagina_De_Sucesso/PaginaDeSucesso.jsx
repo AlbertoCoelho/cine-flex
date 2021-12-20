@@ -4,6 +4,7 @@ import ReservaDeAssentos from "./ReservaDeAssentos";
 
 export default function PaginaDeSucesso(props){
     const {nome,data,horario, objetoPost} = useLocation().state;
+    console.log(objetoPost);
     const meuarray = objetoPost.objetoAssento.ids;
     const cpf = objetoPost.objetoAssento.cpf.informacaocpfusuario;
     const nomedousuario = objetoPost.objetoAssento.name.informacaonomeusuario;
@@ -31,7 +32,7 @@ export default function PaginaDeSucesso(props){
                       <h2>Ingressos</h2>
                      </div>
 
-                    {meuarray.map( (item) => (<ReservaDeAssentos valor={item}/>))} 
+                    {meuarray.map( (item) => (<ReservaDeAssentos key={item} valor={item}/>))} 
                 </div>
 
                 <div className="bloco-informacao">

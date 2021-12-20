@@ -9,10 +9,6 @@ export default function InformacaoUsuario(props){
 
     let navigate = useNavigate();
 
-    const armazenar = (chave,valor) =>{
-        localStorage.setItem(chave,valor)
-    }
-
     const objetoAssento = {
         ids: props.assentosSelecionados,
         name: {informacaonomeusuario},

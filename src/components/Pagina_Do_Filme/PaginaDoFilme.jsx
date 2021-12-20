@@ -11,7 +11,6 @@ export default function PaginaDoFilme(){
     useEffect( () => {
         const promise = axios.get(`https://mock-api.driven.com.br/api/v4/cineflex/movies/${idFilme}/showtimes`);
         promise.then ( response => {
-            console.log(response.data);
             setSessaoFilme(response.data);
         })
     }, []);
