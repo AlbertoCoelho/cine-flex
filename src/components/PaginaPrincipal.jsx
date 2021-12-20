@@ -26,7 +26,7 @@ export default function PaginaPrincipal(){
                     {imagens.map(imagem => (
                         <Link to={`/sessoes/${imagem.id}`}>
                             <div className="image">
-                                <img src={imagem.posterURL} />
+                                <img src={imagem.posterURL} alt='imagemurl' />
                             </div>
                         </Link>
                         )

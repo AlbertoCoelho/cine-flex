@@ -59,7 +59,7 @@ body {
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
-    
+    text-align: center;
 }
 
 .texto-main-container {
@@ -101,6 +101,10 @@ body {
     cursor: pointer;
 }
 
+.main-container .images .image:hover {
+    filter: brightness(0.9);
+}
+
 .main-container .images a {
     width: 145px;
     display: flex;
@@ -126,6 +130,14 @@ body {
         cursor: pointer;
 
     }
+}
+
+.loading {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .caixa-sessao-filme {
@@ -326,6 +338,7 @@ body {
     justify-content: space-between;
 
     margin-bottom: 57px;
+    gap: 7px;
 }
 
 .titulo-input {
@@ -335,9 +348,18 @@ body {
     font-size: 18px;
 }
 
+.titulo-input h3 {
+    color: #247A6B;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+}
+
 .dividir-informacao {
     display: flex;
     flex-direction: column;
+    margin-bottom: 7px;
 }
 
 .dividir-informacao input {
@@ -364,6 +386,10 @@ body {
     background-color: #E8833A;
     border-radius: 3px;
     border: none; 
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     margin-bottom: 30px;
 
@@ -420,6 +446,19 @@ body {
     text-align: left;
 
     color: #293845;
+}
+
+.subtitulo h2 {
+    font-family: Roboto;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 0.04em;
+    text-align: left;
+
+    color: #293845;
+
 }
 
 .label {

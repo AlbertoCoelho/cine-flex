@@ -3,30 +3,28 @@ import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import AssentosFilme from './AssentosFilme';
 import InformacaoUsuario from './InformacaoUsuario';
-import { Link } from 'react-router-dom';
-
 
 export default function PaginaDeAsssentos(){
-    const informacaodousuario = [
-        {tituloinput: "Nome do Comprador:", placeholder:"Digite seu nome..."},
-        {tituloinput: "CPF do comprador:", placeholder:"Digite seu CPF..."}
-    ]
-
+    
     const { idSessao } = useParams();
     const [listaAssentos,setListaAssentos] = useState(null);
-
+    const [assentosSelecionados,setAssentosSelecionados] = useState([]);
+    
     useEffect( () => {
         const promise = axios.get(`https://mock-api.driven.com.br/api/v4/cineflex/showtimes/${idSessao}/seats`);
         promise.then ( response => {
-            console.log(response.data);
             setListaAssentos(response.data);
         })
     }, []);
-
+    
     if (listaAssentos === null) {
-        return <h1>Carregando...</h1>
+        return (
+            <div className='loading'>
+                <img src="https://c.tenor.com/0iK9a1WkT40AAAAC/loading-white.gif" alt='loading' />
+            </div>
+        );
+            
     }
-
 
     return (
         <div className="main-container">
@@ -38,8 +36,11 @@ export default function PaginaDeAsssentos(){
                 {listaAssentos.seats.map( (item) => (
                     <AssentosFilme
                     key={item.id}
+                    id={item.id}
                     name={item.name}
                     isAvailable={item.isAvailable}
+                    assentosSelecionados={assentosSelecionados}
+                    setAssentosSelecionados={setAssentosSelecionados}
                 />))}
             </div>
 
@@ -56,19 +57,11 @@ export default function PaginaDeAsssentos(){
                 </div>
             </div>
             
-            <div className='informacoes-usuario'>
-                {informacaodousuario.map( (item) => <InformacaoUsuario key={item.tituloinput} tituloinput={item.tituloinput} placeholder={item.placeholder} />)} 
-            </div>
-
-            <button className='botao-reservar-assento'>
-                <Link to={"/sucesso/"}>
-                    <span>Reservar assento(s)</span>
-                </Link>
-            </button>          
+            <InformacaoUsuario assentosSelecionados={assentosSelecionados} nomedofilme={listaAssentos.movie.title} datadofilme={listaAssentos.day.date} horariodofilme={listaAssentos.name}/>
             
             <div className='footer'>
                 <div className='caixa-imagem-filme'>
-                   <img src={listaAssentos.movie.posterURL} />
+                   <img src={listaAssentos.movie.posterURL} alt='imagemurl'/>
                 </div>
                 <div className='texto-footer'>
                     <h2>{listaAssentos.movie.title}</h2>   

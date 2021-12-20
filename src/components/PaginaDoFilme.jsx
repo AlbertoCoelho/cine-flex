@@ -18,7 +18,11 @@ export default function PaginaDoFilme(){
 
 
     if (sessaoFilme === null) {
-        return <h1>Carregando...</h1>
+        return (
+            <div className='loading'>
+                <img src="https://c.tenor.com/0iK9a1WkT40AAAAC/loading-white.gif" alt='loading' />
+            </div>
+        );
     }
 
 
@@ -39,7 +43,7 @@ export default function PaginaDoFilme(){
 
             <div className='footer'>
                 <div className='caixa-imagem-filme'>
-                   <img src={sessaoFilme.posterURL} />
+                   <img src={sessaoFilme.posterURL} alt='imagemurl' />
                 </div>
                 <div className='texto-footer'>
                     <h2>{sessaoFilme.title}</h2>        
