@@ -16,7 +16,7 @@ export default function AssentosFilme(props) {
         setAssentosSelecionados([...assentosSelecionados]);
     }
 
-    if(isAvailable === true){
+    if(isAvailable !== true){
         return (
             <AssentoFilmeIndisponivel onClick={( () => alert("Esse assento não está disponível"))}>
                 <span>{name}</span>
